@@ -1,0 +1,8 @@
+#compdef ktx
+
+KUBECONFIG_DIR=${KUBECONFIG_DIR:-"${HOME}/.kube/"}
+
+_ktx() {
+       _arguments -s -S \
+              "*::filename:_files -W ${KUBECONFIG_DIR}"
+}
